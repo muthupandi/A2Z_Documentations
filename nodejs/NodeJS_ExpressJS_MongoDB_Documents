@@ -1,0 +1,198 @@
+Nodejs
+ - Express Framework
+   - Pug template
+   - Mongoose client API - to access the database from mongoDB.
+ - MongoDB
+   - 
+
+
+--------------------------------- Install nodejs and npm--------------------------------------
+
+Install nodejs :
+
+=> sudo apt-get install curl
+=> curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+=> sudo apt-get install nodejs
+
+This will install nodejs and npm with the below packages
+
+node -v 
+
+v10.16.0
+
+npm -v 
+
+6.12.0
+
+-------------------------------- Install MonogoDB -----------------------------------
+
+Refer the link => https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/#install-mongodb-community-edition-using-deb-packages
+
+mongod --version
+
+db version v4.2.1
+git version: edf6d45851c0b9ee15548f0f847df141764a317e
+OpenSSL version: OpenSSL 1.1.1d  10 Sep 2019
+allocator: tcmalloc
+modules: none
+build environment:
+    distmod: ubuntu1804
+    distarch: x86_64
+    target_arch: x86_64
+
+-------------------------------- Install Compass -----------------------------------
+
+https://docs.mongodb.com/compass/master/install/
+
+-------------------------------- Find Versions --------------------------------------
+
+1) Node => node --version 
+
+Ex: v10.16.0
+
+2) NPM => npm --version
+
+6.12.0
+
+3) MongoDB => mongod --version
+
+db version v4.2.1
+git version: edf6d45851c0b9ee15548f0f847df141764a317e
+OpenSSL version: OpenSSL 1.1.1d  10 Sep 2019
+allocator: tcmalloc
+modules: none
+build environment:
+    distmod: ubuntu1804
+    distarch: x86_64
+    target_arch: x86_64
+    
+----------------------------- Install express generator -----------------------------
+
+npm install -g express-generator (or) npx express-generator
+
+Notes: This is used for creating express skeleton
+
+----------------------------- Create express skeleton --------------------------------
+
+express --view=ejs expressapp
+
+Note:
+
+ejs => template type
+expressapp => project directory name
+
+The above command generate the 'expressapp' directory with some files like below
+
+create : expressapp/
+   create : expressapp/public/
+   create : expressapp/public/javascripts/
+   create : expressapp/public/images/
+   create : expressapp/public/stylesheets/
+   create : expressapp/public/stylesheets/style.css
+   create : expressapp/routes/
+   create : expressapp/routes/index.js
+   create : expressapp/routes/users.js
+   create : expressapp/views/
+   create : expressapp/views/error.ejs
+   create : expressapp/views/index.ejs
+   create : expressapp/app.js
+   create : expressapp/package.json
+   create : expressapp/bin/
+   create : expressapp/bin/www
+   
+   
+-------------------------------- Install dependencies for expressjs ------------------------
+
+1) Move to the project directory 
+
+cd expressapp
+
+2) Install dependencies 
+
+npm install 
+
+-------------------------------- Start the server  ---------------------------------
+
+DEBUG=expressapp:* npm start
+
+Now open the browser and add the below url
+
+http://localhost:3000
+
+OR => If you use "nodemon", just enter 
+
+nodemon npm start
+
+
+-------------------------- Stop the server --------------------------------------------
+
+ctrl + c
+
+--------------------- Install Additional dependencies ----------------------------------------
+
+1) Install nodemon
+
+=> npm install --save-dev nodemon
+=> If need to work your modification, we should restart the server manually. Instead of restart the server manually, nodemon checks your changes and change the server automatically.
+
+2) Install mongoose 
+
+=> npm install mongoose
+=> Mongoose is an Object Data Modeling (ODM) library for MongoDB and Node.js. 
+It manages relationships between data, provides schema validation, and is used to translate between objects in code and the representation of those objects in MongoDB
+
+3) Install bycrypt
+
+=> npm install bcrypt
+=> It is used to generate hash passwords
+
+4) Install passport
+
+=> npm install passport
+=> npm install passport-local 
+
+5) Install express-session
+
+=> npm install express-session
+
+6) Install Flash ( For showing flash message )
+
+7) Install 
+
+
+Passport js 
+https://medium.com/@bmshamsnahid/node-js-authentication-using-passport-js-78386be1f518
+http://www.passportjs.org/docs/downloads/html/
+
+
+--------------------------- Create expressjs Project -------------------------
+
+1) Create directory 
+		=> mkdir expressjs
+2) Create package.json file within project directory
+3) In project directoty, Run the command 
+		=> npm init 
+4) Install express module 
+		=> npm install express --save
+5) Install nodemon 
+	=> npm install -g nodemon 
+	=> Please check section "nodemon" for usage in nodejs
+	
+----------------------------- nodemon -----------------------------------------
+
+
+https://scotch.io/tutorials/keeping-api-routing-clean-using-express-routers
+
+Folder structure of node js 
+ => https://www.terlici.com/2014/08/25/best-practices-express-structure.html 
+ 
+ 
+-------------------------------------------------------------- Node js Basic Functions: ------------------------------------------------------------
+
+http://www.java2s.com/Tutorials/Javascript/Node.js_Tutorial/0050__Node.js_String_Functions.htm
+ 
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+

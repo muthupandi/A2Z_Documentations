@@ -1,0 +1,123 @@
+-------------------------------- Install MonogoDB -----------------------------------
+
+Refer the link => https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/#install-mongodb-community-edition-using-deb-packages
+
+mongod --version
+
+db version v4.2.1
+git version: edf6d45851c0b9ee15548f0f847df141764a317e
+OpenSSL version: OpenSSL 1.1.1d  10 Sep 2019
+allocator: tcmalloc
+modules: none
+build environment:
+    distmod: ubuntu1804
+    distarch: x86_64
+    target_arch: x86_64
+
+-------------------------------- Install Compass -----------------------------------
+
+https://docs.mongodb.com/compass/master/install/
+
+--------------------------------- Start mongo server -------------------------------
+
+Before use mongo shell or Compass, we should start the mongo server
+
+Start => sudo service mongod start
+Stop  => sudo service mongod stop
+
+1) Open Mongo shell ( Acccess mongodb using terminal )
+
+=> mongo
+
+2) Create the database 
+
+=> use database_name;
+
+This command create database, if database is already exists, it switch to that database. 
+
+For creating new database, you should create atleast one collection. 
+
+3) List available databases
+
+=> show dbs;
+
+----------------------------------------------------- Collection ----------------------------------------------------------------------------------
+
+1) Create Collection 
+
+=> db.createCollection('users');  //Note: No need to create collection separately, when insert new document, mongodb create the collection automatically. 
+
+2) Show collection 
+
+=> show collections
+
+3) Create Unique Index
+
+=> db.collection.createIndex({'username' : 1}, {unique: true})
+=> Note: Should apply unique index when inserted value is not empty. Because refer the next line
+=> If a document does not have a value for the indexed field in a unique index, the index will store a null value for this document. Because of the unique constraint, MongoDB will only permit one document that lacks the indexed field. If there is more than one document without a value for the indexed field or is missing the indexed field, the index build will fail with a duplicate key error.
+
+
+------------------------------------------------------ Document ------------------------------------------------------------------------------------
+
+1) Insert Document
+
+=> db.collection.insert({'field':'value'})  // Ex: db.users.insert({'name':'muthupandi'})
+
+2) Insert Many Document
+
+=> db.collection.insertMany([{'key1': 'value1', 'key2':'value2'},{'key1': 'value1', 'key2':'value2'}])
+
+7) show all documents
+
+=> db.collectionname.find();  //Ex: db.users.find();
+
+8) Show specific document
+
+=> db.collectionname.find({'key':'value'})
+
+9) Find document with condition (AND)
+
+=> db.collectionname.find({'key1':'value1', 'key2':'value2'})
+
+10) Find document with condition (OR)
+
+=> db.collectionname.find({ $or: [{'key1':'value1'}, {'key2':'value2'}]})
+
+11) Find document with condition  (In clause)
+
+=> db.collectionname.find({key:{$in: ['value1','value2','value3']})
+
+12)  Find document with condition (Not In) clause
+
+=> db.collectionname.find({key:{$nin:['value1','value2','value3']}})
+
+13) Find document count 
+
+=> db.collectionname.find().count()
+
+14) Find document in Asc order
+
+=> db.collectionname.find().sort({'key' : 1})  // 1 means ASC
+
+14) Find document in Asc order
+
+=> db.collectionname.find().sort({'key' : -1}) // -1 means DESC
+
+8) Remove all documents
+
+=> db.collectionname.remove({})
+
+9) Remove specific document
+
+=> db.collectionname.remove({'key':'value'})
+
+
+8) exit the mongo shell
+
+=> exit
+
+
+
+
+
