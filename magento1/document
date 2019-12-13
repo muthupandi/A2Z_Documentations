@@ -1,0 +1,17 @@
+Store creation in Magento 1 :
+-----------------------------------
+
+1) Create root category with store name 
+2) Create store and store view in the admin panel ( System -> Manage Store )
+3) Update index.php ( that is pleaced in magento root directory ) 
+4) Update the secure and unsecure url to the newly created store ( System -> Configuraion -> Web ) 
+5) Update email address to new store ( System -> Configuration -> Store Email Address ) 
+6) Update Background image to new store ( System -> COnfiguration -> Theme Design )
+7) Update welcome text( System -> Configuration -> Design -> Header ) 
+7) Update logo name to new store ( System -> Congiguration -> Design -> Header ) and put the logo image in the image folder 
+8) Create privacy policy and customer service and Customer Service Page Content static blocks ( CMS -> Static Blolcks )
+9) Added email banners template ( System -> Transaction Emails ) And assign in emails in ( System -> Configuration -> Customer Configuration )  & ( System -> Configuration -> Sales Emails ) 
+10) Add the favicon icon to the store (System -> Configuration -> Design -> Favicon Icon )
+
+
+

@@ -1,0 +1,17 @@
+
+Import database:
+
+mysql -u <username> -p <databasename> < <filename.sql>
+
+Export or Dump Database:
+
+mysqldump -u <username> -p <databasename>  > <filename.sql>
+
+Export or dump specific table from database:
+
+mysqldump -u <username> -p <databasename> <ablename>  > <tablefilename.sql>
+
+
+
+
+

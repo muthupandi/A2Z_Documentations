@@ -41,6 +41,21 @@ For creating new database, you should create atleast one collection.
 
 => show dbs;
 
+4) Export database in Mongodb
+
+=> mongodump -d dbname -o path_to_export
+
+It will dump database and create the folder with databasename and all collections are stored with json and bson. Each collection have json and bson files. 
+
+5) Import database in MongoDB
+
+mongorestore --db db_name export_dump_path
+
+6) Import collection in database
+
+mongorestore -d dbname -c collecitonname collectionname.bson
+mongoimport -d dbname -c collecitonname collectionname.metadata.json
+
 ----------------------------------------------------- Collection ----------------------------------------------------------------------------------
 
 1) Create Collection 
@@ -116,6 +131,11 @@ For creating new database, you should create atleast one collection.
 8) exit the mongo shell
 
 => exit
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
 
 
 
