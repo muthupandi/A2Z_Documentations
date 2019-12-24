@@ -135,7 +135,9 @@ mongoimport -d dbname -c collecitonname collectionname.metadata.json
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
 
+Cloud MongoDB:
 
+https://cloud.mongodb.com/user#/login/login
 
 
 
