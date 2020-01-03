@@ -1,0 +1,44 @@
+1) Create configuration file for host
+
+sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/sa.com.conf
+
+2) Modify the configuration files to match with our virtual hosts and put below code.
+
+sudo gedit /etc/apache2/sites-available/sa.com.conf
+
+<VirtualHost *:80>
+    ServerAdmin magento2@test.com
+    ServerName sa.com.tn
+    ServerAlias www.sa.com.tn
+    DocumentRoot /var/www/html/SA
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+    <Directory /var/www/html/SA>
+                Options Indexes FollowSymLinks MultiViews
+                AllowOverride All
+                Order allow,deny
+                allow from all
+</Directory>
+</VirtualHost>
+
+3) Enable virtual host configuration files
+
+sudo a2ensite sa.com.conf
+
+4) Restart apache web server.
+
+sudo service apache2 restart
+
+5) Add your virtual host like below and put code.
+
+gedit /etc/hosts
+
+127.0.0.1 sa.com.tn
+
+7) Now edit core_config_data table and put url here like below
+
+8) Finally check the your virtual host domain => http://sa.com.tn/
+
+Reference: https://magento.stackexchange.com/questions/245721/virtual-host-setup-in-local-host-magento-2
+
+
