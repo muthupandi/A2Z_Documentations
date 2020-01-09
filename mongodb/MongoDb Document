@@ -132,12 +132,38 @@ mongoimport -d dbname -c collecitonname collectionname.metadata.json
 
 => exit
 
+Index:
+-----
+
+1) Create unique index 
+
+=> db.users.createIndex({email: 1}, {unique: true})
+
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 Cloud MongoDB:
 
 https://cloud.mongodb.com/user#/login/login
+
+Atlas:
+
+https://cloud.mongodb.com/user#/login/login
+muthupandi@farshore.com / muthu672
+Cluster => nodejstraining
+username / password : nodejsuser / dkYMwOOaMaoZh5PL
+database : picdatas
+
+
+
+Frontend User:
+test1@gmail.com/test#123
+rajpandi@gmail.com / secret
+rajpandi / secret
+
+
+
+sorry for telling you, Actually my problems are location and finance. I don't like to discuss about my finance problem due to you already give best package as you can. 
 
 
 
