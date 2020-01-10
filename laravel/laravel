@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>App Name - @yield('title')</title>
+    </head>
+    <body>
+        @include('includes.header') <!-- Include the header -->
+        <div class="container">
+            @yield('content') <!-- Call content in layout -->
+        </div>
+        @include('includes.footer') <!-- Include the header -->
+    </body>
+</html>
+
+
+---------
+
+Laraval Auth Pages :
+
+Register => http://laravel.fsp/register 
+Login    => http://laravel.fsp/login
+Forgot password => http://laravel.fsp/password/reset
+
+Laravel Auth Tables : ( The below tables will be added after run 'php artisan make:auth' and 'php artisan migrate' command)
+
+1) migrations
+2) users
+3) password_resets
+
+Laravel Auth Controllers :
+
+/var/www/html/laravel/app/Http/Controllers/Auth/
+/var/www/html/laravel/app/Http/Controllers/Auth/RegisterController.php
+/var/www/html/laravel/app/Http/Controllers/Auth/LoginController.php
+/var/www/html/laravel/app/Http/Controllers/Auth/ForgotPasswordController.php
+/var/www/html/laravel/app/Http/Controllers/Auth/ResetPasswordController.php
+
+Laravel auth View templates :
+
+/var/www/html/laravel/resources/views/auth/
+/var/www/html/laravel/resources/views/auth/register.blade.php
+/var/www/html/laravel/resources/views/auth/login.blade.php
+/var/www/html/laravel/resources/views/auth/passwords/
+/var/www/html/laravel/resources/views/auth/passwords/reset.blade.php
+/var/www/html/laravel/resources/views/auth/passwords/email.blade.php
+
+Also replace the app.blade.php. This file is contain in the following path
+
+/var/www/html/laravel/resources/views/layouts/app.blade.php
+
+Laravel Auth Model :
+
+/var/www/html/laravel/app/User.php
+
+
+
+petrol - 100
+Muthu 08 snacks - 60 
+Muthu 08 food - 110
+Muthu 08 snacks - 48
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

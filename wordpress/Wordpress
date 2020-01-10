@@ -1,0 +1,15 @@
+
+What procedure need to follow to move wordpress from one server to another server ? 
+
+1) Change home and site url in wp_options 
+2) Then need save permalinks(no need any changes, just click save button - to update post,image and other urls..) 
+3) Change database configuration in wp_config.php file. 
+4) change htaccess configuration if need. 
+
+
+steps:
+
+1) Deactivate "All In One WP Security"
+2) Delete wp-includes’ and ‘wp-admin’ directory.
+3) Upload new wp-includes’ and ‘wp-admin’ directory from new wordpress
+4) replace all files in root directory.  

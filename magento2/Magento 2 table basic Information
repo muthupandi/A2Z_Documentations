@@ -1,0 +1,42 @@
+quote
+ - entity_id (Primary Key)
+ - customer_id
+ - coupon_code
+ - base_grand_total
+ - checkout method( if not logged in = guest, logged in = NULL)
+
+quote_item
+ - item_id (primary key)
+ - quote_id (Foreign key to the quote table)
+ - product_id
+ - qty
+ - base_row_total
+
+quote_item_option
+ - option_id (primary key)
+ - item_id (Forign key to the quote_item_option)
+ - product_id
+ - code
+ - value
+ 
+
+quote_address
+ - address_id (primary_key)
+ - quote_id (Foreign key to the quote table)
+ - customer_id
+ - save_in_address_book
+ - customer_address_id
+ - address_type ( billing or shipping )
+ - same_as_biling
+ - 
+
+quote_address_item
+- This table get data when applying multi shipping option
+
+quote_payment
+ - payemt_id (primary_key)
+ - quote_id (Foreign key to the quote table)
+ - method (payment method)
+ - 
+
+
