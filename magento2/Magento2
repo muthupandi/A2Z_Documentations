@@ -1,0 +1,57 @@
+/*********************************************** Magento Default Feature *******************************************************/
+
+Cart:
+-----
+
+1) Each cart item has product image,name, price, quantity and subtotal. Customer can update the quantity to each item, but user need to click the 'Update shopping cart' button to apply changes. 
+2) Additionaly each item has the edit and delete button. Once user click the edit button, it redirect customer to the product page with update cart button. Here customer edit the option and update the cart. 
+1) If customer added one item in cart previously, but the product is in out of stock now, magento shows this item in cart with "This product is out of stock." message intead of removing item from cart and show 'Move to Wishlist' button to move out of stock product to wishlist. 
+
+Ratings:
+--------
+
+In Magento default, Rating feature is not set. Admin need to enable from admin side manually. 
+
+Store -> Attributes -> Ratings
+
+Magento gives three types ratings to the product based on the price, quality and value. Admin need to select each rating and select the store from the 'Visibility' select box. 
+
+Frontend - Once admin selected the visibility, product ratings will be displayed in the review section.If product has the minimum one review or rating, Magento shows the review and rating count below to the product title. 
+
+---
+
+Magento allows guest user to give rating and review to the product. 
+
+If need to restrict the loggedIn user only to give the review, please follow the below step
+
+Store -> Configuration -> Catalog -> Product Reviews
+
+Select 'No' from 'Allow Guests to Write Reviews' dropdown.
+
+---
+
+If user gives the reviews, the reviews are in pending for moderation. Admin can view all reviews through 
+
+Marketing -> User Content -> Reviews
+
+Admin should approve to display ratings and revews on frontend. 
+
+Reference: https://www.humcommerce.com/tutorial/manage-reviews-magento-2/
+
+
+/****************************************** Custom Module Implemented by Muthupandi **************************************************/
+
+
+1) Size Cart 
+2) Undo Remove Quote Item
+
+/**************************************************************************************************************************************/ 
+
+
+1) Can't create attribute set 
+2) Can't set new attribute to attribute set
+3) Can't create new category
+4) Can't create cart rule and catalog rule
+5) No option to import the products
+6) 
+

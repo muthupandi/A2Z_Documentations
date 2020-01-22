@@ -1,0 +1,56 @@
+------------------------------------------ Index -------------------------------------------------------------------------------------------
+
+1) Send Email from localhost using gmail in cakephp 2
+2) ?? in Subject When send email using Mandrill
+
+
+
+
+------------------------------ Send Email from localhost using gmail in cakephp 2 ----------------------------------------------------------
+
+Config settings in email.php like below, 
+
+public $gmail = array(
+        'host' => 'ssl://smtp.gmail.com',
+        'port' => 465,
+        'username' => 'baluksoftcs@gmail.com',
+        'password' => '@gmail12345',
+        'transport' => 'Smtp'
+	);
+
+Add the below code in your function
+
+$to = 'muthupandifsp@gmail.com';
+$subj = 'ComEd® Save and Share™ Lost Password Request';                    
+$email = new CakeEmail('gmail');
+$email->from(array('muthupandi845@gmail.com' => 'Muthupandi'));
+$email->to($to);            
+$email->subject($subj);            
+$result=$email->send();
+
+Reference: https://stackoverflow.com/questions/30697873/email-configuration-in-cakephp
+
+-------------------------------- ?? in Subject When send email using Mandrill ---------------------------------------------------------------
+
+CakePHP adds new line characters to the subject when encode email subject. Although it only occurred with special characters. 
+
+'=?UTF-8?B?RMOpY291dnJleiB2aXRlIHRvdXRlcyBsZXMgbm91dmVhdXTDqXMgc3VyIHE4?= 
+=?UTF-8?B?bWF6b3V0LmJl?='
+
+The above, you can see encode strings are splitted into two and are in two lines
+
+solution in the MandrillTestTransport.php
+
+$subject = str_replace(array(PHP_EOL, "\r"), '', $this->_cakeEmail->subject());
+
+$message = array(
+    'html' => $this->_cakeEmail->message('html'),
+    'text' => $this->_cakeEmail->message('text'),
+    //'subject' => $this->_cakeEmail->subject(),
+    'subject' => $subject,
+    ...
+);
+
+Reference: https://stackoverflow.com/questions/32584468/mandrill-api-in-subject
+
+---------------------------------------------------------------------------------------------------------------------------------------------

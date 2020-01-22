@@ -1,0 +1,8 @@
+
+1) Dia 
+
+=> Dia is an editor for diagrams, graphs, charts etc. There is support for UML static structure diagrams (class diagrams), Entity-Relationship diagrams, network diagrams and much more.
+=> https://www.howtoinstall.me/ubuntu/18-04/dia/
+=> Steps to Installation
+   1) sudo apt update
+   2) sudo apt install dia

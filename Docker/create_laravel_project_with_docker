@@ -1,0 +1,118 @@
+
+Create laravel project with docker:
+-----------------------------------
+
+The following document create containers ngnix and mysql containers, so stop the apache and default mysql server
+
+1) sudo service apache2 stop
+2) sudo service mysql stop
+
+
+In docker, we have used three containers 
+
+1. app (php)
+2. webserver (ngnix)
+3. db (Mysql)
+
+Please check the following reference:
+
+https://www.digitalocean.com/community/tutorials/how-to-set-up-laravel-nginx-and-mysql-with-docker-compose
+
+Issues: 
+
+1) E: Package 'mysql-client' has no installation candidate
+
+In project DockerFile file, change text from 'mysql-client' to 'mariadb-client' and then again execute command to create containers.
+
+2) Use beflow commands to edit the .env instead of use 'docker-compose exec app nano .env'
+
+ => sudo docker exec -it app /bin/bash
+ => nano .env
+ 
+3) Use below commands to generate application key instead of use 'docker-compose exec app php artisan key:generate'
+
+ => sudo docker exec -it app /bin/bash
+ => php artisan key:generate
+ 
+4) Use below commands to config cache instead of use 'docker-compose exec app php artisan config:cache'
+
+ => sudo docker exec -it app /bin/bash
+ => php artisan config:cache
+
+5) Use below commands to check if mentioned database(docker-compose.yml) is create instead of use 'docker-compose exec db bash'
+
+ => sudo docker exec -it db /bin/bash
+ => mysql -uroot -ptoor  //toor - This is the password you set in the docker-compose.yml 
+ => show databases; //you can see the 'laravel' database is already created. //laravel - this is you mentioned in docker-compose.yml
+
+
+Support:
+
+Raghul FSP has idea about docker for laravel. Please contact him. 
+
+-------------------------------------------------- Useful docker commands ------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------
+
+How do remove all docker containers ? 
+
+1) Show available containers in your system 
+
+docker ps -a
+
+2) To stop all containers 
+
+docker ps -q
+
+3) Remove all containers 
+ 
+docker system prune
+
+Reference: https://www.unixtutorial.org/docker-stop-all-containers
+
+----------------------------------------------------------------------------------------------
+
+How do open docker container databases in MySQL workbench ? 
+
+1) Check what ip address was set to your mysql/mariadb container 
+
+Command => docker inspect docker_mariadb_1 | grep \"IPAddress\"
+
+Result:
+
+"IPAddress": "",
+"IPAddress": "172.18.0.2",
+
+172.18.0.2 - is the ip address for the mysql docker container. 
+
+2) When create the docker container using docker, mysql port is mentioned in docker-compose. Check what port is mentioned. generally port is 3306. 
+
+3) Install mysql workbench via ubuntu software center if it is not available in your system. 
+
+4) Click Mysql Connection '+' button, then fill the name to the connection, ip address and port in the popup. 
+
+5) Once connected, you are able to see the your connection in home.
+
+6) double click on your connection. 
+
+7) here you can see the databases of the docker container. 
+
+--------------------------------------------------------------------------------------------------------------------------
+
+volumes - /var/lib/docker/volumes
+
+
+docker-compose stop => command will stop your containers, but it won’t remove them
+docker-compose down => command will stop your containers, but it also removes the stopped containers as well as any networks that were created.
+docker-compose down --help => docker-compose down --help
+http://geekyplatypus.com/dockerise-your-php-application-with-nginx-and-php7-fpm/
+
+
+
+
+ 
+ 
+
+
+
+

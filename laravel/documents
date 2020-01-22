@@ -1,0 +1,8 @@
+1) Check project laravel version in terminal:
+
+php artisan --version
+
+2) Install Auth package and 
+ 
+
+

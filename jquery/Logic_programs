@@ -1,0 +1,55 @@
+
+1. How to detect if device is IOS?
+2. How do check if all specific element is hidden in jQuery ?
+
+----------------------------------------- How to detect if device is IOS? -------------------------------------------------------------------
+
+In some cases, we need to find device type. For example, showing banner to the mobile and iPad devices only. So we need to use jquery for that. The below example show if device is iOS or not.
+
+function iOS() {
+
+  var iDevices = [
+    'iPad Simulator',
+    'iPhone Simulator',
+    'iPod Simulator',
+    'iPad',
+    'iPhone',
+    'iPod'
+  ];
+
+  if (!!navigator.platform) {
+    while (iDevices.length) {
+      if (navigator.platform === iDevices.pop()){ return true; }
+    }
+  }
+
+  return false;
+}
+---------------------------------  How do check if all specific element is hidden in jQuery ? ---------------------------------------------
+
+How do check if all specific element is hidden in jQuery ?
+
+Jquery provides two selector for selecting visible or hidden elements.
+
+:visible 	$("table:visible") 	All visible tables
+:hidden 	$("p:hidden") 		All hidden <p> elements
+
+We can use anyone from above based on your requirements. I use :visible selector in the below example. 
+
+For example: In html, I tell you how to check all p elements are hidden or applied 'display:none' style.
+
+<h3>
+<p style="display:none">Test paragraph element1</p>
+<p style="display:none">Test paragraph element2</p>
+<p style="display:none">Test paragraph element3</p>
+</h3> 
+
+Script:
+
+$(document).ready(function(){
+ if($('p:visible').length==0){
+   alert('All paragraph elements are in hidden);
+ }
+});
+
+---------------------------------------------------------------------------------------------------------------------------------------------

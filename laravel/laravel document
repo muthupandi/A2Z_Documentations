@@ -1,0 +1,40 @@
+/**************  Add Flash message in laravel ******************************************************/
+
+1) In controller, Declase session class like below
+
+use Session; 
+
+2) In controller, add session message using any one of the below method
+
+Session::flash('alert-danger', 'danger');
+Session::flash('alert-warning', 'warning');
+Session::flash('alert-success', 'success');
+Session::flash('alert-info', 'info');
+
+3) In your view(layout file for ex: app.blade.php) :
+
+<div class="flash-message">
+  @foreach (['danger', 'warning', 'success', 'info'] as $msg)
+    @if(Session::has('alert-' . $msg))
+    <p class="alert alert-{{ $msg }}">{{ Session::get('alert-' . $msg) }}</p>
+    @endif
+  @endforeach
+</div>
+Then set a flash message in the controller:
+
+/************** Get form input in controller ******************************************************/
+
+1) Should declare request class in top
+
+use Illuminate\Http\Request;
+
+2) Should add the request object in function 
+
+For ex: public function edit(Request $request, $id){
+
+3) Get input in function 
+
+$request->all() => This give all form inputs
+$request->name => This give the value of the name input field. 
+
+/*******************************
