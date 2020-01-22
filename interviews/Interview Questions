@@ -1,0 +1,196 @@
+
+1) Find duplicate elements in the array ?
+
+array_unique()
+
+Ex:
+
+<?php
+$a=array("a"=>"red","b"=>"green","c"=>"red");
+print_r(array_unique($a));
+?>
+
+Result:
+
+Array ( [a] => red [b] => green ) 
+
+2) what is mvc?
+
+3) How to get last date of month of given date? 
+
+4) Variable name of max execution time constant in php?
+
+5) How to get the data from more than 3 table without use join ? 
+
+6) what is ajax?
+
+
+
+8) what is difference between echo and print in php.
+
+9) Write the code for file upload 
+
+10) How can protect my site from world class hackers ?
+
+11) what is HTML DOM?
+
+12) ways to print an array
+
+13) what is Abstract class ? 
+
+14) What is trait ? 
+
+15) what is array_column ?
+
+16) what is memcache ? 
+
+17) how to set csrf token in magento 2?
+
+
+19) How can you connect a web page data with mysql ?
+
+20) What is csrf token and xss attack
+
+21) Explain preg_Match and preg_replace
+
+
+
+23) what is inheritance ? 
+
+24) What is final class ? 
+
+25) Difference between get and post method
+
+26) What is Interface? Use of Interface.
+
+27) difference between the include(), require(),require_once() functions.
+
+28) 
+
+1. cron job
+
+Fibonacci series
+
+ 
+
+Run time and compile time polymorphism
+
+
+
+what is JSON ? 
+
+
+3. How to block directory access? 
+
+5. What is SDLC? 
+
+What is a web server?
+
+Why we are using $_POST instead of $_REQUEST?
+
+Differrence between mysql_connect and mysql_pconnect?
+
+Why we are using database instead of file system?
+
+
+OOPS:
+-----
+
+1) Difference between procedural programming and object-oriented programming?
+
+2) what is traits ? Use of traits ? 
+
+3) Difference between abstract class and interface
+
+4) Difference between Method overloading ,method overriding ?
+
+5) what is static variable ?
+
+Difference between mysql_fetch_row,mysql_fetcch_object,mysql_fetch_array 
+
+
+
+Third Parties:
+--------------
+
+1) what is aws ?
+
+2) 
+
+CSS:
+----
+
+1. what is responsive web pages ?
+2.  
+
+
+jquery:
+-------
+
+1) what is syntax of box-shadow ?
+2) 
+
+Session and Cookies:
+--------------------
+
+1) What are session and cookies?
+
+2) what is default session time?
+
+3) Is login works when cookies disabled on browser ? why ? 
+
+Git:
+----
+
+1) what is git?
+
+2) 
+
+Mysql:
+-----
+
+1) what is sub-queries ?
+
+2) What are indexes ?
+
+3) Difference between mysiam and innodb storage engine
+
+4) difference between primary key and unique key ?
+
+5) Difference between index and primary key
+
+6) what is session and why is it required?
+
+7) About MySql engine? Name some engines ?
+
+8) What are the types of joining in the database are used?
+
+9) What is trigger ? 
+
+10) What is procedure ? 
+
+11) how to get second maximum entry in sql?
+
+12) How To get Last 3 Records In Mysql? 
+
+13) How many types of constraints are available in MySQL?
+
+
+
+
+System Test:
+------------
+
+1) Send a mail with attachment using phpmailer ? 
+
+2) Find second max number from araay
+
+3) How to delete a specific element in an array?
+
+4) Program for Anagram
+
+5) Upload functions in core php
+
+6) Find Prime Number
+
+

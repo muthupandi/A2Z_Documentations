@@ -1,0 +1,58 @@
+
+
+Create stores in magento 2:
+
+1) Open Admin -> Stores -> All Stores
+2) Click 'Create Store' from top and give the following informations 
+   1) Website
+   2) Name
+   3) Code ( Note: Should be unique ) 
+   4) Choose Root category ( Able to create different category and assign to your store if you sales different products in store or choose default category)
+3) Then we need to create 'store view' to the store. Click 'Create Storeview' from top and give the following informations
+   1) Store ( Choose the store what did you create in previous step )
+   2) Name
+   3) code ( Note: Should be unique ) 
+   4) Status ( Note: Change to Enabled )
+   5) Sort order 
+4) Create virual hosts to each store if you are creating site in localhost(Refer document - A2Z_Documentations/magento2/virtual_host_setup_for_magento2).For ex, Please consider the following the store urls
+   
+   1) magento232.local
+   2) chennai.magento232.local
+   3) madurai.magento232.local
+
+5) Add store url to your stores
+
+   1) Open Admin -> Stores -> COnfiguration -> General -> web
+   2) select store view of your store ( for ex: madurai Store View ) 
+   3) Change Base Url, Base Link Url, Secure Url and Secure Link Url and save it. 
+
+6) Change htaccess file(Add changes after #RewriteBase )
+	
+SetEnvIf Host .*magento232.local* MAGE_RUN_CODE=default
+SetEnvIf Host .*magento232.local* MAGE_RUN_TYPE=store
+
+SetEnvIf Host .*madurai.magento232.local.* MAGE_RUN_CODE=madurai_store_view
+SetEnvIf Host .*madurai.magento232.local.* MAGE_RUN_TYPE=store
+
+SetEnvIf Host .*chennai.magento232.local.* MAGE_RUN_CODE=chennai_store_view
+SetEnvIf Host .*chennai.magento232.local.* MAGE_RUN_TYPE=store
+
+7) Open your store  http://madurai.magento232.local in browser. Now it works. 
+
+  
+
+In which case, you choose multiple store ? 
+
+1) If you like to show different product based on location
+2) If you have different shipping origin and calculate shipping price based on that, you can choose multiple store 
+3) If you have different payment( for ex: one store - cash on delivery, another one store - Paypal ) - This is useful for marketing based on people.
+
+
+
+
+
+ 
+
+
+
+  

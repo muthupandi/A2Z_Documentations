@@ -1,0 +1,78 @@
+Mysql:
+-----
+
+ 
+
+8) Aggregate functions - 
+
+
+5) what is mysql storage engine ? different type of storage engines ? 
+
+=> MyISAM
+=> InnoDB
+=> Merge
+=> CSV
+=> Memory
+
+6) Advantages of InnoDB
+
+=> Its design follows ACID model with transaction commit, rollback, crashback recovery
+=> It supports the key features, such as primary key, forign key..
+=> Disadvantage is => It doesn't compatible with full text search.
+
+7) What is full text search ? 
+
+
+
+
+Website :
+
+    We can say website as the pareent of the store.
+    It contains unique store and order base.
+    Able to choose different payment method, shipping and currency.
+    Able to set the product price website wise
+
+Store :
+
+    One website can have different store.
+    Able to change different menu to the store
+    Able to change the appearence.
+    Able to change the product selection.
+    Able to give different price.
+    But not possible to set different currency, payment method(can't set different payment credentials), shipping method(can't set different payment credentials).
+    Able to manage all store from same admin panel.
+
+Store View:
+
+    Used to present store in different language.
+
+Flush Magento Cache - This clears the cache (var/cache) of any items that Magento knows it has created. Flush Cache Storage - Clears everything in var/cache, regardless of how those files in there were created. It means that clear cache of the other application too.
+
+What is cache and Index Management ?
+
+
+1) what is sub-queries ?
+
+2) What are indexes ?
+
+3) Difference between mysiam and innodb storage engine
+
+
+5) Difference between index and primary key
+
+6) what is session and why is it required?
+
+7) About MySql engine? Name some engines ?
+
+8) What are the types of joining in the database are used?
+
+9) What is trigger ? 
+
+10) What is procedure ? 
+
+11) how to get second maximum entry in sql?
+
+12) How To get Last 3 Records In Mysql? 
+
+13) How many types of constraints are available in MySQL?
+

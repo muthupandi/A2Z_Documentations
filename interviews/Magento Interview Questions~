@@ -1,0 +1,89 @@
+Magento :
+---------
+
+1) What is MVC ? 
+
+MVC, or Model, View, Controller, is a type of architecture in which business logic, data access, and user interface are separated for applications. 
+
+MVC has two different types: configuration-based and convention-based. 
+
+However, Magento uses the configuration-based version. This means that to get a module’s config file to work, everything must be specified to it.
+
+1) What is EAV Architecture ? 
+
+=> EAV stands for Entity, Attribute and Value. 
+=> EAV is a database architecture. 
+=> In magento, EAV architecure is used => For example, storing product details, magento doesn't use single table. It uses multiple table for storing for that. I mean that based on attribute type, magento decides where the value should be stored. 
+
+If the attribute type is text, this field value will be stored in the product_entity_varchar
+
+	
+
+
+
+2) What is ORM ? 
+
+3) Why Magento is slow ? 
+
+4) Experience in unit testing in Magento?
+
+5) What are the design pattern Magento follows?
+
+6)  What is the role of object Manager?
+
+7)  Difference between plugin and observer.
+
+8) What is the folder structure of Magento to create a module?
+
+9) How do you create a custom module in Magento?
+
+In order to create a custom module in Magento, you must first - create a module directory, second – create controller, block, and module files for your module, third – create a module configuration file, and finally, fourth – create an XML file. The purpose of creating an XML file is so that you can enable or disable the module and also instruct the system which code pool that the module will be taken from.
+
+10) Name The Product Types That Are Available In Magento? 
+
+11) What Is Inventory?
+
+12) What Are Static Blocks?
+
+13) What Are The Different Features Of Magento?
+
+
+    SEO Friendly
+    Google sitemap support
+    Reporting and analytics
+    Customer accounts
+    Order management
+    Site management
+    Payment
+    Marketing promotion and tools
+    International support
+    Extremely modular architecture
+
+
+
+1) performance optimization
+
+
+    To speed up Magento performance, don't run mysql and web server on the same machine.
+    Do not host files on your web server that you do not use.
+    Optimization of session storage.
+    Enabling Magento flat catalog. (Magento uses a complex and resource-intensive Entity Attribute Value [or EAV] based catalog). After initial catalog establishment, enabling the flat catalog can dramatically improve database querying time.
+    Identification and disabling of unused Magento modules.
+
+
+2) What Is The Process Of Code Optimization?
+
+    Removal of unused or unnecessary code processes.
+    To optimize Magento performance, JavaScript and CSS files need to be compressed and aggregated.
+    Conformance of all site images to optimal web image sizes.
+    Identification of bottlenecks(process that causes the entire process to slow down or stop) processes in both front-end and back-end.
+
+
+
+2) How you will see you challenges at your job?
+
+13. How many tables will be created when you make a new EAV module?
+
+If you make a new EAV module, then six tables will be created. These tables include:
+
+module_datetime, module, module_decimal, module_int, module_text, and module_varchar.
