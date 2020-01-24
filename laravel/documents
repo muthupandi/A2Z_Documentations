@@ -37,6 +37,71 @@ database/migrations
 
 public/
 
+---------------------------------------
+
+
+$first = $this->get('doctrine.manager')->getRepository(MyEntity::class)->findOneBy([]);
+
+$friend = $this->getDoctrine()->getRepository(User::class)->find($id);
+
+
+1) Create model using artisan
+
+php artisan make:model Flight
+
+
+Notes:
+1) Create model File 
+   => php artisan make:model Category
+
+2) If you use table name as model name's plural. No need to mention in model. Otherwise need to mention table name in model. For ex: you use cars_category table.
+   => protected $table = 'cars_category';
+
+3) In default, Laravel consider the primary key column name is 'id', if you are using different key, you need to mention primary key in model. 
+   => protected $primaryKey = 'category_id';
+
+4) 
+
+
+Migration:
+----------
+
+Migration is used to create/alter table through laravel.
+
+
+#1 - Create table and add fields
+
+1) Create the table
+
+php artisan make:migration create_categories_table
+
+2) Create column and set as unique 
+
+$table->string('name')->unique();
+
+3) Create migration 
+
+php artisan migrate
+
+Reference:
+https://laravel.com/docs/5.8/migrations
+
+#2 - Add new fields or change fields in existing table
+
+1) Run the command (note : we mentioned table name in command) 
+
+php artisan make:migration add_categories_table
+
+
+
+
+
+
+
+
+
+
+
 
 	
  
