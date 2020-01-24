@@ -1,8 +1,44 @@
+
+1) Download Laravel:
+
+composer create-project --prefer-dist laravel/laravel project-dir "5.8.*"
+
+2) Install Composer ( This is not required for fresh installation )
+
+composer install
+
+3) 
+
 1) Check project laravel version in terminal:
 
 php artisan --version
 
-2) Install Auth package and 
+2) In which file you configure routing ? 
+
+app/Http/routes.php
+
+3) In which location you add the controllers ? 
+
+app/Http/Controllers
+
+4) In which location you add the views ? 
+
+resources/views
+
+5) In which location you add the models ? 
+
+app/ 
+
+6) In which location you add the migrations files ? 
+
+database/migrations
+
+7) In which location you add the assets(css,js, images) ? 
+
+public/
+
+
+	
  
 
 
