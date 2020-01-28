@@ -39,6 +39,31 @@ public/
 
 
 	
+
+1) To check available(what we add) routes :
+
+php artisan route:list
+
+2) Laravel Authentication:
+
+Laravel has default package for authentication. So to work laravel authentication, you need to run the following commands.
+
+=> php artisan make:auth
+ => It will generate routes in the routes/web.php file
+ => It will generate required templates 
+    => login.blade.php
+    => register.blade.php
+    => verify.blade.php
+    => passwords/email.blade.php
+    => reset.blade.php
+
+php artisan migrate
+
+=> It will create tables for authentication
+
+
+
+
  
 
 
