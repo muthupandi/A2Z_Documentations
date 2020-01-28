@@ -1,0 +1,17 @@
+
+1) Get query data of request in controller:
+
+use Symfony\Component\HttpFoundation\Request;
+
+Syntax:
+getInt(string $key, int $default = 0)
+
+$pageId = $request->query->getInt('pageId', 0);
+$qty = $request->query->getInt('qty', 20);
+
+Reference:
+https://symfony.com/doc/current/components/http_foundation.html
+
+
+
+
