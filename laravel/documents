@@ -128,6 +128,18 @@ php artisan migrate
 
 
 
+How do call assets in templates ? 
+
+{{ asset('css/style.css') }}
+
+How do call url in templates ? 
+
+{{ url('/admin/users/index')}}
+
+How do create model using artisan ? 
+
+php artisan make:model Modelname
+
 
  
 
