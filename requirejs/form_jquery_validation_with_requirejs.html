@@ -1,0 +1,28 @@
+<html>
+	
+   <head>
+	   <script src="js/lib/require.js"></script>
+	   <script src="js/requirejs_config.js"></script>
+	   <script>
+		requirejs(['jquery','jquery-validator'], function($){
+			$("#form").validate();
+		});
+	   </script>
+   </head>
+   <body>
+      <h2>Validation of a form</h2>
+      <form id="form" method="post" action="">
+         First name:<br>
+         <input type="text" name="firstname" required value="">
+         <br>
+         Last name:<br>
+         <input type="text" name="lastname" required value="">
+         <br>
+         Email:<br>
+         <input type="email" name="u_email" required value="">
+         <br>
+         <br><br>
+         <input type="submit" value="Submit">
+      </form> 
+   </body>
+</html>
