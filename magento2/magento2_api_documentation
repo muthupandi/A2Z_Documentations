@@ -1,0 +1,83 @@
+
+Magento 2 API:
+
+# Magento 2 provides default APIs for most of the features, for ex, product, category, checkout..
+# The following url gives API list for opensource and commerce
+  => https://devdocs.magento.com/guides/v2.3/rest/list.html
+# Even if the above url gives the list, no details about request and response details. The following url will be helpful to find request and response to each API
+  => https://devdocs.magento.com/swagger/#/storeStoreRepositoryV1/storeStoreRepositoryV1GetListGet
+
+Web API Authentication :
+
+
+Steps For Using API:
+
+1) Create admin user for accessing magento data, give resources which are accessible 
+2) Get authentication token passing username and password to the below API
+   http://localhost/magento232/index.php/rest/V1/integration/admin/token
+3) Now you can use Any API using access token which you get from the above API
+
+Reference: https://www.tigren.com/get-categories-magento-2-api/
+
+
+Example:
+
+1) Get Auth Token by using the below API
+
+API : http://localhost/magento232/index.php/rest/V1/integration/admin/token
+
+Request : 
+{
+  "username" : "username"
+  "password" : "password"
+}
+
+Response: ( You will get access token ) 
+
+"s76sh5v7sw3jmchhbq8umniegle8wkq2"
+
+Reference: https://www.tigren.com/get-categories-magento-2-api/
+
+2) Get all Categories with child 
+
+API: http://localhost/magento232/index.php/rest/V1/categories/list
+
+Request:
+
+Header:
+
+Authorization : Bearer s76sh5v7sw3jmchhbq8umniegle8wkq2   ( token from previous step )
+Content-Type : application/json
+
+Response:
+
+{
+    "id": 2,
+    "parent_id": 1,
+    "name": "Default Category",
+    "is_active": true,
+    "position": 1,
+    "level": 1,
+    "product_count": 1,
+    "children_data": [
+        {
+            "id": 3,
+            "parent_id": 2,
+            "name": "TestCat",
+            "is_active": true,
+            "position": 1,
+            "level": 2,
+            "product_count": 1,
+            "children_data": []
+        }
+    ]
+}
+
+Reference: https://www.tigren.com/get-categories-magento-2-api/
+
+Hi Manoj, 
+
+I accept the offer. Once I recieved the relieving letter, I will submit all documents on March 11 at madurai branch. 
+
+
+
